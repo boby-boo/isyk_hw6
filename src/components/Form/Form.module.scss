@@ -1,0 +1,58 @@
+@import '../global.scss';
+
+.form {
+    @extend %tplFlex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: column;
+    row-gap: 50px;
+    margin: 20px auto 0;
+    padding: 10px 20px 20px;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: transparentize($primaryColor, 0.6);
+    box-shadow: -1px 0px 10px -1px #008080;
+
+    &__heading {
+        font-size: 25px;
+        text-align: center;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+
+    .inputs__inner {
+        @extend %tplFlex;
+        justify-content: space-between;
+        column-gap: 10px;
+        width: 100%;
+    }
+    
+    label {
+        width: 100%;
+    }
+
+    .field__error {
+        border: 2px solid red;
+    }
+
+    h3 {
+        margin-bottom: 4px;
+        color: transparentize($mainColor, 0.2);
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+
+    @media(max-width: 900px) {
+        .inputs__inner {
+            max-width: 1000px;
+            flex-direction: column;
+            row-gap: 30px;
+        }
+        h3 {
+            margin-bottom: 20px;
+        }
+    }
+}

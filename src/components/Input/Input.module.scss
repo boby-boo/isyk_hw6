@@ -1,0 +1,22 @@
+@import '../global.scss';
+
+input {
+    width: 100%;
+    padding: 8px 8px;
+    color: $mainColor;
+    background: transparentize($primaryColor, 0.5);
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    &::placeholder {
+        text-transform: uppercase;
+        color: transparentize($mainColor, 0.6);  
+    }
+    &:focus {
+        background-color: transparentize(teal, 0.8);
+    }
+}
+
+.error {
+    border: 2px solid #f1203c;
+}
